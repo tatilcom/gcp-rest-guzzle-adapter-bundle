@@ -1,0 +1,7 @@
+gcp_rest_guzzle_adapter:
+    clients:
+        foo:
+            email: 'test@test.com'
+            private_key: 'foo_key'
+            scope: 'foo_scope'
+            project_base_url: 'foo_project_base_url'

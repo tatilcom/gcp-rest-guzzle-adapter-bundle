@@ -1,0 +1,3 @@
+services:
+    gcp_rest_guzzle_adapter.client_factory:
+        class: GcpRestGuzzleAdapter\Client\ClientFactory

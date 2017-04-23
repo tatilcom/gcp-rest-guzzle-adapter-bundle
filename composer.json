@@ -1,0 +1,38 @@
+{
+    "name": "metglobal/gcp-rest-guzzle-adapter-bundle",
+    "description": "Integrates gcp-rest-guzzle-adapter with Symfony.",
+    "type": "library",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/seyfiaslan/gcp-rest-guzzle-adapter.git"
+        }
+    ],
+    "require": {
+        "metglobal/gcp-rest-guzzle-adapter": "v1.0",
+        "symfony/dependency-injection": "~2.7",
+        "symfony/event-dispatcher": "~2.7",
+        "symfony/config": "~2.7 ",
+        "symfony/yaml": "~2.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "GcpRestGuzzleAdapterBundle\\": ""
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GcpRestGuzzleAdapterBundle\\Tests\\": "tests/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Seyfi Aslan",
+            "email": "seyfi.aslangecinen@metglobal.com"
+        }
+    ]
+}
