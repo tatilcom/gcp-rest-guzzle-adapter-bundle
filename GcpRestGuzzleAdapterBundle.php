@@ -2,7 +2,8 @@
 
 namespace GcpRestGuzzleAdapterBundle;
 
-class GcpRestGuzzleAdapterBundle
-{
+use Symfony\Component\HttpKernel\Bundle\Bundle;
 
+class GcpRestGuzzleAdapterBundle extends Bundle
+{
 }

@@ -13,11 +13,13 @@ gcp_rest_guzzle_adapter:
     clients:
         pubsub:
             email: 'test@test.com'
-            private_key: '-----BEGIN PRIVATE KEY-----SDADAavaf...-----END PRIVATE KEY-----'
+            private_key: "-----BEGIN PRIVATE KEY-----SDADAavaf...-----END PRIVATE KEY-----"
             scope: 'https://www.googleapis.com/auth/pubsub'
             project_base_url: 'https://pubsub.googleapis.com/v1/projects/test-project123/'
 
 ```
+
+Note: Double quote for private_key. Single quote occur openssl_sign error
 
 ###### Accessing Service by container
 ```php

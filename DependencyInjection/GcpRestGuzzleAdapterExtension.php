@@ -2,6 +2,7 @@
 
 namespace GcpRestGuzzleAdapterBundle\DependencyInjection;
 
+use GcpRestGuzzleAdapter\Client\ClientFactory;
 use GuzzleHttp\Client;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -29,8 +30,15 @@ class GcpRestGuzzleAdapterExtension extends Extension
 
         foreach ($config['clients'] as $key => $clientParams) {
             $definition = new Definition(Client::class);
-            $definition->setFactory(['gcp_rest_guzzle_adapter.client_factory:createClient']);
-            $definition->setArguments($clientParams);
+            $definition->setFactory([ClientFactory::class, 'createClient']);
+            $definition->setArguments(
+                [
+                    $clientParams['email'],
+                    $clientParams['private_key'],
+                    $clientParams['scope'],
+                    $clientParams['project_base_url']
+                ]
+            );
 
             $container->setDefinition(sprintf('gcp_rest_guzzle_adapter.client.%s_client', $key), $definition);
         }

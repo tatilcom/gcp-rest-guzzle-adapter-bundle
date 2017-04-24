@@ -2,6 +2,7 @@
 
 namespace GcpRestGuzzleAdapterBundle\Tests\DependencyInjection;
 
+use GcpRestGuzzleAdapter\Client\ClientFactory;
 use GcpRestGuzzleAdapterBundle\DependencyInjection\GcpRestGuzzleAdapterExtension;
 use GuzzleHttp\Client;
 use Symfony\Component\Config\FileLocator;
@@ -19,13 +20,13 @@ class GcpRestGuzzleAdapterExtensionTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($container->has('gcp_rest_guzzle_adapter.client.foo_client'));
 
         $definition = $container->getDefinition('gcp_rest_guzzle_adapter.client.foo_client');
-        $this->assertEquals(['gcp_rest_guzzle_adapter.client_factory:createClient'], $definition->getFactory());
+        $this->assertEquals([ClientFactory::class, 'createClient'], $definition->getFactory());
         $this->assertEquals(
             [
-                'email' => 'test@test.com',
-                'private_key' => 'foo_key',
-                'scope' => 'foo_scope',
-                'project_base_url' => 'foo_project_base_url'
+                'test@test.com',
+                'foo_key',
+                'foo_scope',
+                'foo_project_base_url'
             ],
             $definition->getArguments()
         );
