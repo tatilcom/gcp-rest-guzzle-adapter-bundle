@@ -2,14 +2,8 @@
     "name": "metglobal/gcp-rest-guzzle-adapter-bundle",
     "description": "Integrates gcp-rest-guzzle-adapter with Symfony.",
     "type": "library",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/seyfiaslan/gcp-rest-guzzle-adapter.git"
-        }
-    ],
     "require": {
-        "metglobal/gcp-rest-guzzle-adapter": "1.0.*",
+        "metglobal/gcp-rest-guzzle-adapter": "~0.1",
         "symfony/dependency-injection": "~2.7|~3.0",
         "symfony/event-dispatcher": "~2.7|~3.0",
         "symfony/config": "~2.7|~3.0 ",
@@ -30,7 +24,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-master": "0.1.x-dev"
         }
     },
     "license": "MIT",
@@ -38,6 +32,10 @@
         {
             "name": "Seyfi Aslan",
             "email": "seyfi.aslangecinen@metglobal.com"
+        },
+        {
+            "name": "Burak Bolat",
+            "email": "burak.bolat@metglobal.com"
         }
     ]
 }
