@@ -10,7 +10,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 
-class GcpRestGuzzleAdapterExtensionTest extends \PHPUnit_Framework_TestCase
+class GcpRestGuzzleAdapterExtensionTest extends \PHPUnit\Framework\TestCase
 {
     public function testFooClient()
     {
