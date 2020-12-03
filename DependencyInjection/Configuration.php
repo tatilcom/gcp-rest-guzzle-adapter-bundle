@@ -17,9 +17,14 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
+        $treeBuilder = new TreeBuilder('gcp_rest_guzzle_adapter');
 
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('gcp_rest_guzzle_adapter');
+        if (method_exists($treeBuilder, 'getRootNode')) {
+            $rootNode = $treeBuilder->getRootNode();
+        } else {
+            // symfony < 4.2 support
+            $rootNode = $treeBuilder->root('gcp_rest_guzzle_adapter');
+        }
 
         $rootNode
             ->children()

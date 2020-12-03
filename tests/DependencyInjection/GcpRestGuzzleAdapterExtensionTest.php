@@ -5,12 +5,13 @@ namespace GcpRestGuzzleAdapterBundle\Tests\DependencyInjection;
 use GcpRestGuzzleAdapter\Client\ClientFactory;
 use GcpRestGuzzleAdapterBundle\DependencyInjection\GcpRestGuzzleAdapterExtension;
 use GuzzleHttp\Client;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 
-class GcpRestGuzzleAdapterExtensionTest extends \PHPUnit_Framework_TestCase
+class GcpRestGuzzleAdapterExtensionTest extends TestCase
 {
     public function testFooClient()
     {
