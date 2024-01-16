@@ -1,5 +1,5 @@
 {
-    "name": "metglobal/gcp-rest-guzzle-adapter-bundle",
+    "name": "tatilcom/gcp-rest-guzzle-adapter-bundle",
     "description": "Integrates gcp-rest-guzzle-adapter with Symfony.",
     "type": "library",
     "require": {
